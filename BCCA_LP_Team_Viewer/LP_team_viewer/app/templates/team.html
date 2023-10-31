@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %} {{name}} {% endblock %} {% extends
+"base.html" %} {% block content %}
+<div class="contentBox">
+  <h1>{{ name }}</h1>
+  <h2>{{ desc }}</h2>
+  <h3>Members</h3>
+  <ul>
+    {% for person in members %}
+    <li>{{ person }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

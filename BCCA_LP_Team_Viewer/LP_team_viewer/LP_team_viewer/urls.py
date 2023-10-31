@@ -18,17 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from app.views import (
     landing_page,
-    documentation_page,
-    community_page,
-    procurement_page,
-    management_page,
+    team_page,
 )
 
 urlpatterns = [
     path("", landing_page),
-    path("management", management_page),
-    path("procurement", procurement_page),
-    path("community", community_page),
-    path("documentation", documentation_page),
+    path("<str:team_name>", team_page),
     path("admin/", admin.site.urls),
 ]
